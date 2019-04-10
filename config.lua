@@ -17,14 +17,14 @@ end
 
 -- configure wifi
 module.WIFI = {}
-module.WIFI.ssid = "W00t"
+module.WIFI.ssid = G.secrets.WIFISSID
 module.WIFI.pwd = G.secrets.WIFIPASS
 
 -- configure MQTT
 module.MQTT = {}
-module.MQTT.host = "192.168.1.8"
-module.MQTT.port = 1883
-module.MQTT.user = "home-assistant"
+module.MQTT.host = G.secrets.MQTTHOST
+module.MQTT.port = G.secrets.MQTTPORT
+module.MQTT.user = G.secrets.MQTTUSER
 module.MQTT.pass = G.secrets.MQTTPASS
 module.MQTT.endpoint = "/home-assistant/" .. module.SELF .. "/"
 
